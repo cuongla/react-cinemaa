@@ -1,68 +1,117 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# React-Cinemaa
 
-## Available Scripts
+An online database of information related to films, television programs, home videos, video games, and streaming content online. A clone of IMDb
 
-In the project directory, you can run:
+## Installation
 
-### `yarn start`
+`$ git clone https://github.com/tinla94/react-cinemaa` or click `Clone or download`.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Code Folder
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+1. Install node packages: `npm install`
+2. Start up browser to see UI: `npm start`.
+3. Electron will load its own window
 
-### `yarn test`
+## Technology Use
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Front-End
 
-### `yarn build`
+1. `React` - an open-source JavaScript library which is used for building user interfaces specifically for single page applications
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. `React Hooks` - functions that let us hook into the React state and lifecycle features from function components
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+4. `SCSS` ( Syntactically Awesome Style Sheet ) - superset of CSS.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+5 `Prop-types` - runtime type checking for React props and similar objects.
 
-### `yarn eject`
+### Other Tools
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+1. `TMDb API` - a popular, user editable database for movies and TV shows.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+2. `ESLint` - A pluggable and configurable linter tool for identifying and reporting on patterns in JavaScript. Maintain your code quality with ease.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+3. `prettier` -  an opinionated code formatter;
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Setup for build
 
-## Learn More
+1. Setup eslint & prettier
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+You can check .eslintrc.json and .prettier.json for more information.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
+    "lint": "eslint 'src/**/*.js*'"
+    "prettier:check": "prettier --check 'src/**/*.{js,jsx,json}'"
+    "prettier:write": "prettier --write 'src/**/*.{js,jsx,json}'"
+```
 
-### Code Splitting
+####eslintrc.json
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+```
+{
+    "env": {
+        "browser": true,
+        "es6": true
+    },
+    "extends": [
+        "plugin:react/recommended",
+        "standard"
+    ],
+    "globals": {
+        "Atomics": "readonly",
+        "SharedArrayBuffer": "readonly"
+    },
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 2018,
+        "sourceType": "module"
+    },
+    "settings": {
+      "react": {
+        "version": "16.0"
+      }
+    },
+    "plugins": [
+        "react"
+    ],
+    "rules": {
+        "semi": [2, "always"],
+        "space-before-function-paren": [0, {"anonymous": "always", "named": "always"}],
+        "camelcase": 0,
+        "no-return-assign": 0
+    }
+}
+```
 
-### Analyzing the Bundle Size
+####prettierrc.json
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+```
+{
+  "trailingComma": "none",
+  "tabWidth": 2,
+  "semi": true,
+  "singleQuote": true
+}
+```
 
-### Making a Progressive Web App
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+## Deployment
 
-### Advanced Configuration
+You can use any Cloud Server to deploy your application.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+In this project, I have used `Netlify` service to deploy my application.
 
-### Deployment
+### Who is Netlify?
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+`Netlify` a web developer platform that multiplies productivity. By unifying the elements of the modern decoupled web, from local development to advanced edge logic, `Netlify` enables a 10x faster path to much more performant, secure, and scalable websites and apps.
 
-### `yarn build` fails to minify
+You can learn more about how to deploy your app with `Netlify` here: https://www.netlify.com/blog/2016/09/29/a-step-by-step-guide-deploying-on-netlify/
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+## Authors
+
+- **Tin La**
+
+## Tutorial 
+
+https://www.udemy.com/course/build-a-modern-react-and-redux-app-with-circleci-cicd-aws/
