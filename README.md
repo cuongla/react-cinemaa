@@ -20,9 +20,9 @@ An online database of information related to films, television programs, home vi
 
 2. `React Hooks` - functions that let us hook into the React state and lifecycle features from function components
 
-4. `SCSS` ( Syntactically Awesome Style Sheet ) - superset of CSS.
+3. `SCSS` ( Syntactically Awesome Style Sheet ) - superset of CSS.
 
-5 `Prop-types` - runtime type checking for React props and similar objects.
+4. `Prop-types` - runtime type checking for React props and similar objects.
 
 ### Other Tools
 
@@ -44,7 +44,7 @@ You can check .eslintrc.json and .prettier.json for more information.
     "prettier:write": "prettier --write 'src/**/*.{js,jsx,json}'"
 ```
 
-####eslintrc.json
+#### eslintrc.json
 
 ```
 {
@@ -84,7 +84,7 @@ You can check .eslintrc.json and .prettier.json for more information.
 }
 ```
 
-####prettierrc.json
+#### prettierrc.json
 
 ```
 {
