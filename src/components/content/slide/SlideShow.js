@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
@@ -73,6 +74,7 @@ const SlideShow = (props) => {
   };
 
   const Indicators = (props) => {
+    // eslint-disable-next-line react/prop-types
     const { currentSlide } = props;
     const listIndicators = images.map((slide, i) => {
       const btnClasses =
