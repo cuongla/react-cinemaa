@@ -1,3 +1,4 @@
+/* eslint-disable no-useless-escape */
 import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
@@ -15,12 +16,12 @@ const Grid = (props) => {
 
   useEffect(() => {
     setMovieData(list);
-
     // eslint-disable-next-line
   }, [list]);
 
   const formatMovieTitle = (title) => {
-    const titleStr = title.toLowerCase();
+    // remove all special characters
+    const titleStr = title.toLowerCase().replace(/[\|&;\$%@"<>\(\)\+,]/g, '');
     return titleStr.replace(/ /g, '-');
   };
 
